@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <title>Загальнонаціональна хвилина мовчання</title>
+    <style>
+      @font-face {
+        font-family: "UAF Memory";
+        src: url("assets/uaf-memory.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+      }
+
+      :root {
+        --quiet: #b8b8b8;
+        --honour: #ffffff;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #000;
+        color: var(--quiet);
+      }
+
+      body {
+        position: fixed;
+        inset: 0;
+        font-family: "UAF Memory", Georgia, serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      #poster {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 640px;
+        height: 900px;
+        overflow: hidden;
+        color: var(--quiet);
+        background: #000;
+        transform: translate(-50%, -50%) scale(1);
+        transform-origin: center;
+      }
+
+      body.is-active #poster {
+        color: var(--honour);
+      }
+
+      .tryzub {
+        position: absolute;
+        top: 114px;
+        left: 50%;
+        width: 57px;
+        height: 94px;
+        background: currentColor;
+        transform: translateX(-50%);
+        -webkit-mask: url("assets/tryzub.svg") center / contain no-repeat;
+        mask: url("assets/tryzub.svg") center / contain no-repeat;
+      }
+
+      .title {
+        position: absolute;
+        top: 336px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        user-select: none;
+      }
+
+      .overline {
+        margin: 0;
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 5.2px;
+      }
+
+      .headline {
+        margin: 25px 0 0;
+        font-size: 76px;
+        font-weight: 400;
+        line-height: 1.12;
+        letter-spacing: 5px;
+      }
+
+      .clock {
+        position: absolute;
+        top: 735px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 400;
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum" 1;
+        line-height: 1;
+        letter-spacing: 5px;
+        white-space: nowrap;
+        user-select: none;
+      }
+
+      .test-badge {
+        position: fixed;
+        z-index: 10;
+        top: max(12px, env(safe-area-inset-top));
+        left: max(12px, env(safe-area-inset-left));
+        display: none;
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 4px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.78);
+        font: 700 12px/1.2 Arial, Helvetica, sans-serif;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+      }
+
+      .test-badge.is-visible {
+        display: block;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <audio
+      id="metronome-audio"
+      src="assets/metronome-click.wav"
+      preload="auto"
+      playsinline
+      aria-hidden="true"
+    ></audio>
+
+    <main id="poster" aria-label="Загальнонаціональна хвилина мовчання">
+      <div class="tryzub" aria-hidden="true"></div>
+
+      <section class="title" aria-label="Загальнонаціональна хвилина мовчання">
+        <p class="overline">Загальнонаціональна</p>
+        <h1 class="headline">Хвилина<br />мовчання</h1>
+      </section>
+
+      <time id="clock" class="clock" aria-label="Поточний час у Києві">00:00</time>
+      <p id="status" class="sr-only" aria-live="polite"></p>
+    </main>
+
+    <button
+      id="test-badge"
+      class="test-badge"
+      type="button"
+      title="Натисніть, щоб перезапустити 60-секундний тест зі звуком"
+      aria-label="Тестовий режим. Натисніть, щоб перезапустити тест зі звуком"
+    >
+      🔴 ТЕСТОВИЙ РЕЖИМ
+    </button>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const POSTER_WIDTH = 640;
+        const POSTER_HEIGHT = 900;
+        const TEST_DURATION_MS = 60_000;
+        const isTestMode = new URLSearchParams(window.location.search).get("test") === "1";
+
+        const poster = document.getElementById("poster");
+        const clock = document.getElementById("clock");
+        const status = document.getElementById("status");
+        const testBadge = document.getElementById("test-badge");
+        const metronomeAudio = document.getElementById("metronome-audio");
+        metronomeAudio.volume = 0.82;
+
+        const kyivClock = new Intl.DateTimeFormat("uk-UA", {
+          timeZone: "Europe/Kyiv",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hourCycle: "h23",
+        });
+
+        let testStartedAt = performance.now();
+        let previousTestSecond = -1;
+        let previousKyivSecond = "";
+        let wasActive = false;
+
+        function fitPoster() {
+          const viewportWidth = document.documentElement.clientWidth;
+          const viewportHeight = document.documentElement.clientHeight;
+          const scale = Math.min(viewportWidth / POSTER_WIDTH, viewportHeight / POSTER_HEIGHT);
+          poster.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+
+        function soundMetronome() {
+          try {
+            metronomeAudio.currentTime = 0;
+            const playback = metronomeAudio.play();
+            if (playback) playback.catch(() => {});
+          } catch (_) {
+            // Звук стане доступним після першої взаємодії з браузером.
+          }
+        }
+
+        async function unlockAudio(playConfirmation = false) {
+          const originalVolume = metronomeAudio.volume;
+          try {
+            metronomeAudio.volume = 0;
+            metronomeAudio.currentTime = 0;
+            await metronomeAudio.play();
+            metronomeAudio.pause();
+            metronomeAudio.currentTime = 0;
+            metronomeAudio.volume = originalVolume;
+            if (playConfirmation && document.body.classList.contains("is-active")) {
+              soundMetronome();
+            }
+          } catch (_) {
+            // Браузер сам вирішує, чи дозволяти звук без взаємодії користувача.
+          } finally {
+            metronomeAudio.volume = originalVolume;
+          }
+        }
+
+        function kyivParts(date) {
+          return Object.fromEntries(
+            kyivClock
+              .formatToParts(date)
+              .filter((part) => part.type !== "literal")
+              .map((part) => [part.type, part.value]),
+          );
+        }
+
+        function setActive(active) {
+          document.body.classList.toggle("is-active", active);
+          if (active !== wasActive) {
+            status.textContent = active
+              ? "Розпочалася загальнонаціональна хвилина мовчання"
+              : "Хвилина мовчання завершилася";
+            wasActive = active;
+          }
+        }
+
+        function update() {
+          const now = new Date();
+          const parts = kyivParts(now);
+          let active = false;
+
+          if (isTestMode) {
+            const elapsed = performance.now() - testStartedAt;
+            active = elapsed >= 0 && elapsed < TEST_DURATION_MS;
+
+            if (active) {
+              clock.textContent = "09:00";
+              const testSecond = Math.floor(elapsed / 1000);
+              if (testSecond !== previousTestSecond) {
+                previousTestSecond = testSecond;
+                soundMetronome();
+              }
+            } else {
+              clock.textContent = `${parts.hour}:${parts.minute}`;
+            }
+          } else {
+            clock.textContent = `${parts.hour}:${parts.minute}`;
+            active = parts.hour === "09" && parts.minute === "00";
+
+            if (active) {
+              const kyivSecond = `${now.getTime() - now.getMilliseconds()}`;
+              if (kyivSecond !== previousKyivSecond) {
+                previousKyivSecond = kyivSecond;
+                soundMetronome();
+              }
+            } else {
+              previousKyivSecond = "";
+            }
+          }
+
+          setActive(active);
+          window.requestAnimationFrame(update);
+        }
+
+        async function restartTest() {
+          await unlockAudio(false);
+          testStartedAt = performance.now();
+          previousTestSecond = -1;
+        }
+
+        fitPoster();
+        window.addEventListener("resize", fitPoster, { passive: true });
+        if (window.visualViewport) {
+          window.visualViewport.addEventListener("resize", fitPoster, { passive: true });
+        }
+
+        document.addEventListener("pointerdown", () => unlockAudio(false), { once: true });
+        document.addEventListener("keydown", () => unlockAudio(false), { once: true });
+
+        if (isTestMode) {
+          testBadge.classList.add("is-visible");
+          testBadge.addEventListener("click", restartTest);
+          unlockAudio(false);
+        }
+
+        update();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+Mechanical metronome recording
+Author: Joseph SARDIN
+Source: https://bigsoundbank.com/metronome-a-120bpm-s0468.html
+
+License: CC0 (public domain)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+The website uses one short click extracted from the original recording.
