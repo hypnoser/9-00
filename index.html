@@ -5,7 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark" />
-    <title>Загальнонаціональна хвилина мовчання</title>
+    <meta
+      name="description"
+      content="Онлайн-сторінка загальнонаціональної хвилини мовчання: точний київський час, щоденна активація о 09:00, метроном і режим для екранів та установ."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:site_name" content="Загальнонаціональна хвилина мовчання" />
+    <meta property="og:title" content="Хвилина мовчання онлайн — щодня о 09:00 за Києвом" />
+    <meta
+      property="og:description"
+      content="Онлайн-сторінка для щоденної загальнонаціональної хвилини мовчання о 09:00 за київським часом."
+    />
+    <meta property="og:url" content="https://khvylyna-movchannia.hypnoser.chatgpt.site/" />
+    <meta
+      property="og:image"
+      content="https://khvylyna-movchannia.hypnoser.chatgpt.site/assets/realistic-ukrainian-flag.png"
+    />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Український прапор, що розвивається на вітру" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Хвилина мовчання онлайн — 09:00 за Києвом" />
+    <meta
+      name="twitter:description"
+      content="Щоденна загальнонаціональна хвилина мовчання з точним київським часом."
+    />
+    <meta
+      name="twitter:image"
+      content="https://khvylyna-movchannia.hypnoser.chatgpt.site/assets/realistic-ukrainian-flag.png"
+    />
+    <link rel="canonical" href="https://khvylyna-movchannia.hypnoser.chatgpt.site/" />
+    <link rel="alternate" hreflang="uk" href="https://khvylyna-movchannia.hypnoser.chatgpt.site/" />
+    <link rel="alternate" hreflang="x-default" href="https://khvylyna-movchannia.hypnoser.chatgpt.site/" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <title>Хвилина мовчання онлайн — щодня о 09:00 за Києвом</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://khvylyna-movchannia.hypnoser.chatgpt.site/#website",
+            "url": "https://khvylyna-movchannia.hypnoser.chatgpt.site/",
+            "name": "Загальнонаціональна хвилина мовчання",
+            "description": "Онлайн-сторінка для щоденної загальнонаціональної хвилини мовчання о 09:00 за київським часом.",
+            "inLanguage": "uk-UA"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://khvylyna-movchannia.hypnoser.chatgpt.site/#webpage",
+            "url": "https://khvylyna-movchannia.hypnoser.chatgpt.site/",
+            "name": "Хвилина мовчання онлайн — щодня о 09:00 за Києвом",
+            "isPartOf": {
+              "@id": "https://khvylyna-movchannia.hypnoser.chatgpt.site/#website"
+            },
+            "mainEntity": {
+              "@id": "https://khvylyna-movchannia.hypnoser.chatgpt.site/#application"
+            },
+            "inLanguage": "uk-UA",
+            "isBasedOn": "https://www.president.gov.ua/documents/1432022-41729"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://khvylyna-movchannia.hypnoser.chatgpt.site/#application",
+            "name": "Загальнонаціональна хвилина мовчання",
+            "url": "https://khvylyna-movchannia.hypnoser.chatgpt.site/",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "Будь-яка сучасна операційна система з веббраузером",
+            "browserRequirements": "JavaScript та підтримка HTML5 Audio",
+            "inLanguage": "uk-UA",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "UAH"
+            }
+          }
+        ]
+      }
+    </script>
     <style>
       @font-face {
         font-family: "UAF Memory";
@@ -61,20 +144,65 @@
         color: var(--honour);
       }
 
+      .flag-wrap {
+        position: absolute;
+        z-index: 0;
+        top: 244px;
+        left: 20px;
+        width: 600px;
+        height: 420px;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        filter: saturate(0.94) brightness(0.76) contrast(1.06)
+          drop-shadow(0 24px 42px rgba(0, 0, 0, 0.92));
+        transition:
+          opacity 2s ease-in-out,
+          visibility 0s linear 2s;
+        pointer-events: none;
+      }
+
+      .flag-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse at center, transparent 34%, rgba(0, 0, 0, 0.18) 71%, rgba(0, 0, 0, 0.62) 100%),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent 18%, transparent 78%, rgba(0, 0, 0, 0.48)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.26), transparent 24%, transparent 72%, rgba(0, 0, 0, 0.44));
+      }
+
+      .flag-canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      body.show-flag .flag-wrap {
+        opacity: 0.88;
+        visibility: visible;
+        transition:
+          opacity 2s ease-in-out,
+          visibility 0s linear 0s;
+      }
+
       .tryzub {
         position: absolute;
+        z-index: 2;
         top: 114px;
         left: 50%;
         width: 57px;
         height: 94px;
         background: currentColor;
         transform: translateX(-50%);
+        filter: drop-shadow(0 3px 14px rgba(0, 0, 0, 0.92));
         -webkit-mask: url("assets/tryzub.svg") center / contain no-repeat;
         mask: url("assets/tryzub.svg") center / contain no-repeat;
       }
 
       .title {
         position: absolute;
+        z-index: 2;
         top: 336px;
         left: 0;
         width: 100%;
@@ -82,6 +210,7 @@
         text-transform: uppercase;
         white-space: nowrap;
         user-select: none;
+        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.96);
       }
 
       .overline {
@@ -102,6 +231,7 @@
 
       .clock {
         position: absolute;
+        z-index: 2;
         top: 735px;
         left: 0;
         width: 100%;
@@ -115,6 +245,7 @@
         letter-spacing: 5px;
         white-space: nowrap;
         user-select: none;
+        text-shadow: 0 3px 20px rgba(0, 0, 0, 0.96);
       }
 
       .test-badge {
@@ -135,6 +266,36 @@
 
       .test-badge.is-visible {
         display: block;
+      }
+
+      .info-link {
+        position: fixed;
+        z-index: 10;
+        right: max(14px, env(safe-area-inset-right));
+        bottom: max(14px, env(safe-area-inset-bottom));
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 50%;
+        color: #b8b8b8;
+        background: rgba(0, 0, 0, 0.78);
+        font: 600 18px/1 Georgia, serif;
+        text-decoration: none;
+        transition: opacity 240ms ease, color 240ms ease, border-color 240ms ease;
+      }
+
+      .info-link:hover,
+      .info-link:focus-visible {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.72);
+        outline: none;
+      }
+
+      body.is-active .info-link {
+        opacity: 0;
+        pointer-events: none;
       }
 
       .sr-only {
@@ -160,6 +321,10 @@
     ></audio>
 
     <main id="poster" aria-label="Загальнонаціональна хвилина мовчання">
+      <div class="flag-wrap" aria-hidden="true">
+        <canvas id="flag-canvas" class="flag-canvas" width="1200" height="840"></canvas>
+      </div>
+
       <div class="tryzub" aria-hidden="true"></div>
 
       <section class="title" aria-label="Загальнонаціональна хвилина мовчання">
@@ -181,6 +346,14 @@
       🔴 ТЕСТОВИЙ РЕЖИМ
     </button>
 
+    <a
+      class="info-link"
+      href="pro-khvylynu-movchannia.html"
+      target="_top"
+      title="Про загальнонаціональну хвилину мовчання"
+      aria-label="Відкрити інформаційну сторінку про загальнонаціональну хвилину мовчання"
+    >i</a>
+
     <script>
       (() => {
         "use strict";
@@ -195,7 +368,14 @@
         const status = document.getElementById("status");
         const testBadge = document.getElementById("test-badge");
         const metronomeAudio = document.getElementById("metronome-audio");
+        const flagCanvas = document.getElementById("flag-canvas");
+        const flagContext = flagCanvas.getContext("2d");
+        const flagImage = new Image();
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         metronomeAudio.volume = 0.82;
+
+        flagImage.decoding = "async";
+        flagImage.src = "assets/realistic-ukrainian-flag.png";
 
         const kyivClock = new Intl.DateTimeFormat("uk-UA", {
           timeZone: "Europe/Kyiv",
@@ -209,12 +389,82 @@
         let previousTestSecond = -1;
         let previousKyivSecond = "";
         let wasActive = false;
+        let flagWasDrawn = false;
+        let lastFlagDrawAt = Number.NEGATIVE_INFINITY;
 
         function fitPoster() {
           const viewportWidth = document.documentElement.clientWidth;
           const viewportHeight = document.documentElement.clientHeight;
           const scale = Math.min(viewportWidth / POSTER_WIDTH, viewportHeight / POSTER_HEIGHT);
           poster.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        }
+
+        function drawFlag(timestamp, active) {
+          if (!active) {
+            if (flagWasDrawn) {
+              flagContext.clearRect(0, 0, flagCanvas.width, flagCanvas.height);
+              flagWasDrawn = false;
+              lastFlagDrawAt = Number.NEGATIVE_INFINITY;
+            }
+            return;
+          }
+
+          if (!flagImage.complete || !flagImage.naturalWidth) return;
+          if (reduceMotion && Number.isFinite(lastFlagDrawAt)) return;
+          if (!reduceMotion && timestamp - lastFlagDrawAt < 33) return;
+
+          lastFlagDrawAt = timestamp;
+          flagWasDrawn = true;
+
+          const width = flagCanvas.width;
+          const height = flagCanvas.height;
+          const strips = 84;
+          const sourceStrip = flagImage.naturalWidth / strips;
+          const imageRatio = flagImage.naturalWidth / flagImage.naturalHeight;
+          const flagWidth = width * 0.98;
+          const destinationStrip = flagWidth / strips;
+          const flagHeight = Math.min(flagWidth / imageRatio, height * 0.94);
+          const baseX = (width - flagWidth) / 2;
+          const baseY = (height - flagHeight) / 2;
+          const motionTime = reduceMotion ? 0 : timestamp * 0.001;
+
+          flagContext.clearRect(0, 0, width, height);
+
+          for (let index = 0; index < strips; index += 1) {
+            const progress = index / (strips - 1);
+            const freedom = 0.03 + Math.pow(progress, 0.82) * 0.97;
+            const phase = motionTime * 1.45 - progress * 5.8;
+            const verticalWave =
+              (Math.sin(phase) * 18 + Math.sin(motionTime * 2.35 + progress * 9.2) * 4.5) *
+              freedom;
+            const heightScale = 1 + Math.cos(phase + 0.55) * 0.024 * freedom;
+            const horizontalDrift = Math.sin(phase * 0.72) * 4 * freedom;
+            const brightness = 0.8 + (Math.cos(phase + 0.35) + 1) * 0.1;
+
+            flagContext.filter = `brightness(${brightness})`;
+            flagContext.drawImage(
+              flagImage,
+              index * sourceStrip,
+              0,
+              sourceStrip + 0.8,
+              flagImage.naturalHeight,
+              baseX + index * destinationStrip - 1 + horizontalDrift,
+              baseY + verticalWave,
+              destinationStrip + 3,
+              flagHeight * heightScale,
+            );
+          }
+
+          flagContext.filter = "none";
+          flagContext.globalCompositeOperation = "source-atop";
+          const fabricLight = flagContext.createLinearGradient(0, 0, width, 0);
+          fabricLight.addColorStop(0, "rgba(255,255,255,0.01)");
+          fabricLight.addColorStop(0.35, "rgba(255,255,255,0.08)");
+          fabricLight.addColorStop(0.7, "rgba(0,0,0,0.06)");
+          fabricLight.addColorStop(1, "rgba(0,0,0,0.18)");
+          flagContext.fillStyle = fabricLight;
+          flagContext.fillRect(0, 0, width, height);
+          flagContext.globalCompositeOperation = "source-over";
         }
 
         function soundMetronome() {
@@ -265,14 +515,20 @@
           }
         }
 
+        function setFlagVisible(visible) {
+          document.body.classList.toggle("show-flag", visible);
+        }
+
         function update() {
           const now = new Date();
           const parts = kyivParts(now);
           let active = false;
+          let flagVisible = false;
 
           if (isTestMode) {
             const elapsed = performance.now() - testStartedAt;
             active = elapsed >= 0 && elapsed < TEST_DURATION_MS;
+            flagVisible = active && elapsed < 58_000;
 
             if (active) {
               clock.textContent = "09:00";
@@ -287,6 +543,7 @@
           } else {
             clock.textContent = `${parts.hour}:${parts.minute}`;
             active = parts.hour === "09" && parts.minute === "00";
+            flagVisible = active && Number(parts.second) < 58;
 
             if (active) {
               const kyivSecond = `${now.getTime() - now.getMilliseconds()}`;
@@ -300,6 +557,8 @@
           }
 
           setActive(active);
+          setFlagVisible(flagVisible);
+          drawFlag(performance.now(), active);
           window.requestAnimationFrame(update);
         }
 

@@ -1,0 +1,28 @@
+ПОВНИЙ ПАКЕТ САЙТУ «ЗАГАЛЬНОНАЦІОНАЛЬНА ХВИЛИНА МОВЧАННЯ»
+
+Головні сторінки:
+- index.html — головний екран хвилини мовчання
+- pro-khvylynu-movchannia.html — інформаційна сторінка та інструкції
+
+SEO та AI-пошук:
+- robots.txt
+- sitemap.xml
+- llms.txt
+- llms-full.txt
+- manifest.webmanifest
+- .nojekyll
+
+Інструкції та умови:
+- README-GITHUB-PAGES.md
+- USAGE-AND-LICENSES.txt
+- LICENSE-UAF-Memory.txt
+- LICENSE-METRONOME.txt
+
+Ресурси в папці assets:
+- favicon.svg
+- tryzub.svg
+- uaf-memory.woff2
+- metronome-click.wav
+- realistic-ukrainian-flag.png
+
+Загальна кількість файлів у пакеті: 18.

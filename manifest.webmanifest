@@ -1,0 +1,21 @@
+{
+  "name": "Загальнонаціональна хвилина мовчання",
+  "short_name": "Хвилина мовчання",
+  "description": "Щоденна загальнонаціональна хвилина мовчання о 09:00 за київським часом.",
+  "lang": "uk-UA",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
