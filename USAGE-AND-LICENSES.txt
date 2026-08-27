@@ -19,9 +19,9 @@ Free for commercial and non-commercial use.
 License: CC BY-ND 4.0
 https://creativecommons.org/licenses/by-nd/4.0/
 
-Pendulum mechanism #2 — real mechanical clock mechanism strike
-Authors: Joseph SARDIN & Axeline T.
-Source: https://bigsoundbank.com/pendulum-mechanism-2-s3358.html
+Mechanical metronome recording
+Author: Joseph SARDIN
+Source: https://bigsoundbank.com/metronome-a-120bpm-s0468.html
 License: CC0 1.0
 https://creativecommons.org/publicdomain/zero/1.0/
 

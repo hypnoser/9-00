@@ -1,9 +1,9 @@
-Pendulum mechanism #2 — real mechanical clock mechanism strike
-Authors: Joseph SARDIN & Axeline T.
-Source: https://bigsoundbank.com/pendulum-mechanism-2-s3358.html
+Mechanical metronome recording
+Author: Joseph SARDIN
+Source: https://bigsoundbank.com/metronome-a-120bpm-s0468.html
 
 License: CC0 (public domain)
 https://creativecommons.org/publicdomain/zero/1.0/
 
-The website uses a short processed strike extracted from the original recording.
-Processing: trimming, lower pitch, gentle room echo, fade-out and peak limiting.
+The website uses one short processed strike extracted from the original recording.
+Processing: trimming, slightly lower pitch, tonal correction and fade-out. No echo or added reverberation.
