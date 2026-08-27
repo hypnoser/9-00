@@ -40,4 +40,4 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-Sitemap: https://khvylyna-movchannia.hypnoser.chatgpt.site/sitemap.xml
+Sitemap: https://hypnoser.github.io/9-00/sitemap.xml

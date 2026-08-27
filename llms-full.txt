@@ -3,7 +3,7 @@
 Оновлено: 2026-08-26
 Мова: українська
 Часовий пояс: Europe/Kyiv
-Основна сторінка: https://khvylyna-movchannia.hypnoser.chatgpt.site/
+Основна сторінка: https://hypnoser.github.io/9-00/
 
 ## Короткий опис
 
@@ -36,7 +36,7 @@ https://www.president.gov.ua/documents/1432022-41729
 Для повної перевірки потрібно додати до URL параметр `?test=1`.
 
 Приклад:
-https://khvylyna-movchannia.hypnoser.chatgpt.site/?test=1
+https://hypnoser.github.io/9-00/?test=1
 
 Тест триває 60 секунд, показує час 09:00, відтворює метроном і повторює проявлення та згасання прапора. Червоний індикатор у лівому верхньому куті дозволяє перезапустити тест. Через політику браузерів автоматичний звук іноді стає доступним лише після першого натискання або натискання індикатора тестового режиму.
 
@@ -64,7 +64,7 @@ https://khvylyna-movchannia.hypnoser.chatgpt.site/?test=1
 HTML-приклад:
 
 <iframe
-  src="https://khvylyna-movchannia.hypnoser.chatgpt.site/"
+  src="https://hypnoser.github.io/9-00/"
   title="Загальнонаціональна хвилина мовчання"
   allow="autoplay"
   style="width:100%;height:100vh;border:0;display:block"
@@ -93,16 +93,15 @@ HTML-приклад:
 
 ## GitHub Pages
 
-Рекомендований варіант — репозиторій користувацького сайту з назвою `ВАШ-ЛОГІН.github.io`.
+Сайт розміщено в репозиторії `hypnoser/9-00`.
 
-1. Створити на GitHub публічний репозиторій `ВАШ-ЛОГІН.github.io`.
-2. Розпакувати архів сайту.
-3. Завантажити весь вміст у корінь репозиторію. Файл `index.html` має лежати на верхньому рівні.
-4. Відкрити Settings → Pages.
-5. У Build and deployment вибрати Deploy from a branch.
-6. Вибрати гілку `main` і папку `/(root)`.
-7. Зберегти налаштування та дочекатися публікації.
-8. Відкрити `https://ВАШ-ЛОГІН.github.io/` та перевірити `?test=1`.
+1. Розпакувати архів сайту.
+2. Завантажити весь вміст у корінь репозиторію `hypnoser/9-00` із заміною попередніх файлів. Файл `index.html` має лежати на верхньому рівні.
+3. Відкрити Settings → Pages.
+4. У Build and deployment вибрати Deploy from a branch.
+5. Вибрати гілку `main` і папку `/(root)`.
+6. Зберегти налаштування та дочекатися публікації.
+7. Відкрити `https://hypnoser.github.io/9-00/` та перевірити `https://hypnoser.github.io/9-00/?test=1`.
 
 Після придбання домену його потрібно додати в Settings → Pages → Custom domain, налаштувати DNS відповідно до актуальної документації GitHub, увімкнути HTTPS і замінити тимчасову адресу в canonical, Open Graph, sitemap.xml, robots.txt, llms.txt та llms-full.txt.
 
@@ -122,7 +121,9 @@ HTML-приклад:
 - семантичну інформаційну сторінку;
 - llms.txt і llms-full.txt.
 
-Після підключення постійного домену рекомендовано додати Google Search Console, Bing Webmaster Tools і аналітику, а потім подати адресу sitemap.xml на індексацію.
+Рекомендовано додати Google Search Console, Bing Webmaster Tools і аналітику, а потім подати адресу `https://hypnoser.github.io/9-00/sitemap.xml` на індексацію.
+
+Оскільки сайт працює в підпапці `/9-00/`, файл `https://hypnoser.github.io/9-00/robots.txt` не є кореневим robots.txt для домену. Для застосування правил роботами на рівні всього домену їх потрібно також розмістити за адресою `https://hypnoser.github.io/robots.txt` через репозиторій `hypnoser.github.io`.
 
 ## Політика для AI-систем
 
@@ -144,12 +145,12 @@ Google-Extended об’єднує керування використанням 
 Готову сторінку можна безоплатно відкривати, демонструвати публічно, вбудовувати через iframe, поширювати посиланням і розміщувати на власному статичному хостингу. Якщо файли копіюються або розповсюджуються, необхідно зберігати ліцензійні повідомлення для шрифту та звуку.
 
 Повні умови:
-https://khvylyna-movchannia.hypnoser.chatgpt.site/USAGE-AND-LICENSES.txt
+https://hypnoser.github.io/9-00/USAGE-AND-LICENSES.txt
 
 ## Навігація
 
-- Головна сторінка: https://khvylyna-movchannia.hypnoser.chatgpt.site/
-- Інформаційна сторінка: https://khvylyna-movchannia.hypnoser.chatgpt.site/pro-khvylynu-movchannia.html
-- Короткий LLMS-опис: https://khvylyna-movchannia.hypnoser.chatgpt.site/llms.txt
-- Sitemap: https://khvylyna-movchannia.hypnoser.chatgpt.site/sitemap.xml
-- Robots: https://khvylyna-movchannia.hypnoser.chatgpt.site/robots.txt
+- Головна сторінка: https://hypnoser.github.io/9-00/
+- Інформаційна сторінка: https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html
+- Короткий LLMS-опис: https://hypnoser.github.io/9-00/llms.txt
+- Sitemap: https://hypnoser.github.io/9-00/sitemap.xml
+- Robots: https://hypnoser.github.io/9-00/robots.txt

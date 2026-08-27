@@ -2,25 +2,23 @@
 
 Цей архів уже підготовлений як статичний сайт. Сервер, база даних і встановлення програм не потрібні.
 
-## Рекомендований варіант
+## Поточне розміщення
 
-Створіть репозиторій із назвою `ВАШ-ЛОГІН.github.io`. Так сайт одразу працюватиме в корені адреси `https://ВАШ-ЛОГІН.github.io/`, а `robots.txt`, `sitemap.xml` та LLMS-файли будуть розташовані правильно.
+Сайт розміщено в репозиторії `hypnoser/9-00` і він доступний за адресою:
+
+https://hypnoser.github.io/9-00/
 
 ## Покроково
 
-1. Увійдіть у GitHub.
-2. Натисніть **New repository**.
-3. Назвіть репозиторій `ВАШ-ЛОГІН.github.io`.
-4. Оберіть **Public** і створіть репозиторій.
-5. Повністю розпакуйте ZIP-архів сайту.
-6. На сторінці репозиторію натисніть **Add file → Upload files**.
-7. Завантажте весь вміст розпакованої папки. `index.html` має бути в корені репозиторію.
-8. Натисніть **Commit changes**.
-9. Відкрийте **Settings → Pages**.
-10. У **Build and deployment** оберіть **Deploy from a branch**.
-11. Виберіть гілку `main`, папку `/(root)` і натисніть **Save**.
-12. Дочекайтеся появи адреси сайту й відкрийте `https://ВАШ-ЛОГІН.github.io/`.
-13. Перевірте повний режим за адресою `https://ВАШ-ЛОГІН.github.io/?test=1`.
+1. Увійдіть у GitHub і відкрийте репозиторій `hypnoser/9-00`.
+2. Повністю розпакуйте ZIP-архів сайту.
+3. На сторінці репозиторію натисніть **Add file → Upload files**.
+4. Завантажте весь вміст розпакованої папки із заміною попередніх файлів. `index.html` має бути в корені репозиторію.
+5. Натисніть **Commit changes**.
+6. Якщо Pages ще не налаштовано, відкрийте **Settings → Pages**.
+7. У **Build and deployment** оберіть **Deploy from a branch**, гілку `main`, папку `/(root)` і натисніть **Save**.
+8. Дочекайтеся публікації та відкрийте `https://hypnoser.github.io/9-00/`.
+9. Перевірте повний режим за адресою `https://hypnoser.github.io/9-00/?test=1`.
 
 Офіційна документація:
 https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
@@ -36,6 +34,10 @@ https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a
 Офіційна документація:
 https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
+## Важливо про robots.txt у проєктному репозиторії
+
+Файл доступний за адресою `https://hypnoser.github.io/9-00/robots.txt`, але стандарт robots.txt передбачає файл у корені домену: `https://hypnoser.github.io/robots.txt`. Щоб правила для AI-ботів діяли на рівні всього домену, додайте такий самий файл до репозиторію користувацького сайту `hypnoser.github.io`. `sitemap.xml` у цьому пакеті вже містить правильні адреси сторінок `/9-00/`.
+
 ## Звук на телевізорі або інформаційній панелі
 
 Браузер може заблокувати звук до першої взаємодії користувача. Перед постійним показом:
@@ -45,6 +47,6 @@ https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pag
 3. Переконайтеся, що метроном чути.
 4. Для керованих пристроїв попросіть IT-адміністратора додати домен до корпоративного списку дозволеного автоматичного відтворення звуку.
 
-## Після підключення постійного домену
+## Індексація
 
-Можна під’єднати Google Search Console, Bing Webmaster Tools і аналітику та подати `sitemap.xml` на індексацію.
+Можна під’єднати Google Search Console, Bing Webmaster Tools і аналітику та подати `https://hypnoser.github.io/9-00/sitemap.xml` на індексацію.

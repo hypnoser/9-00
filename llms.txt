@@ -6,9 +6,9 @@
 
 ## Основні сторінки
 
-- [Хвилина мовчання онлайн](https://khvylyna-movchannia.hypnoser.chatgpt.site/): поточний київський час і автоматична щоденна активація о 09:00.
-- [Про загальнонаціональну хвилину мовчання](https://khvylyna-movchannia.hypnoser.chatgpt.site/pro-khvylynu-movchannia.html): призначення сайту, принцип роботи, способи використання, вбудовування та запуск на GitHub Pages.
-- [Повний машинозчитуваний опис](https://khvylyna-movchannia.hypnoser.chatgpt.site/llms-full.txt): розширений контекст і технічні інструкції.
+- [Хвилина мовчання онлайн](https://hypnoser.github.io/9-00/): поточний київський час і автоматична щоденна активація о 09:00.
+- [Про загальнонаціональну хвилину мовчання](https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html): призначення сайту, принцип роботи, способи використання, вбудовування та запуск на GitHub Pages.
+- [Повний машинозчитуваний опис](https://hypnoser.github.io/9-00/llms-full.txt): розширений контекст і технічні інструкції.
 
 ## Офіційне джерело
 
@@ -31,4 +31,4 @@
 
 ## Додатково
 
-- [Умови використання і ліцензії](https://khvylyna-movchannia.hypnoser.chatgpt.site/USAGE-AND-LICENSES.txt)
+- [Умови використання і ліцензії](https://hypnoser.github.io/9-00/USAGE-AND-LICENSES.txt)

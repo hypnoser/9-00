@@ -1,28 +1,25 @@
 ПОВНИЙ ПАКЕТ САЙТУ «ЗАГАЛЬНОНАЦІОНАЛЬНА ХВИЛИНА МОВЧАННЯ»
+Основна адреса: https://hypnoser.github.io/9-00/
+Версія пакета: 2026-08-27
 
-Головні сторінки:
-- index.html — головний екран хвилини мовчання
-- pro-khvylynu-movchannia.html — інформаційна сторінка та інструкції
+Файли в корені архіву:
+- index.html — головна сторінка;
+- pro-khvylynu-movchannia.html — інформаційна сторінка;
+- robots.txt — правила для пошукових і AI-ботів;
+- sitemap.xml — карта сайту;
+- llms.txt — стислий опис для AI-систем;
+- llms-full.txt — розширений машинозчитуваний опис;
+- manifest.webmanifest — вебманіфест;
+- README-GITHUB-PAGES.md — інструкція оновлення GitHub Pages;
+- USAGE-AND-LICENSES.txt — умови використання;
+- LICENSE-UAF-Memory.txt — ліцензія шрифту;
+- LICENSE-METRONOME.txt — ліцензія звуку;
+- PACKAGE-CONTENTS.txt — цей перелік;
+- .nojekyll — вимкнення обробки Jekyll.
 
-SEO та AI-пошук:
-- robots.txt
-- sitemap.xml
-- llms.txt
-- llms-full.txt
-- manifest.webmanifest
-- .nojekyll
-
-Інструкції та умови:
-- README-GITHUB-PAGES.md
-- USAGE-AND-LICENSES.txt
-- LICENSE-UAF-Memory.txt
-- LICENSE-METRONOME.txt
-
-Ресурси в папці assets:
-- favicon.svg
-- tryzub.svg
-- uaf-memory.woff2
-- metronome-click.wav
-- realistic-ukrainian-flag.png
-
-Загальна кількість файлів у пакеті: 18.
+Папка assets:
+- favicon.svg;
+- tryzub.svg;
+- uaf-memory.woff2;
+- metronome-click.wav;
+- realistic-ukrainian-flag.png.
