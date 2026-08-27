@@ -535,7 +535,7 @@
               const testSecond = Math.floor(elapsed / 1000);
               if (testSecond !== previousTestSecond) {
                 previousTestSecond = testSecond;
-                soundMetronome();
+                if (testSecond % 2 === 0) soundMetronome();
               }
             } else {
               clock.textContent = `${parts.hour}:${parts.minute}`;
@@ -546,10 +546,11 @@
             flagVisible = active && Number(parts.second) < 58;
 
             if (active) {
-              const kyivSecond = `${now.getTime() - now.getMilliseconds()}`;
+              const second = Number(parts.second);
+              const kyivSecond = `${parts.hour}:${parts.minute}:${parts.second}`;
               if (kyivSecond !== previousKyivSecond) {
                 previousKyivSecond = kyivSecond;
-                soundMetronome();
+                if (second % 2 === 0) soundMetronome();
               }
             } else {
               previousKyivSecond = "";
