@@ -19,7 +19,7 @@
     <meta property="og:title" content="Про загальнонаціональну хвилину мовчання" />
     <meta
       property="og:description"
-      content="Призначення сторінки, цілодобова YouTube-трансляція та інструкції для екранів, установ, сайтів, проєктів, медіа і GitHub Pages."
+      content="Призначення сторінки, цілодобова YouTube-трансляція та інструкції для екранів, установ, сайтів, проєктів і медіа."
     />
     <meta
       property="og:url"
@@ -33,7 +33,7 @@
     <meta name="twitter:title" content="Про загальнонаціональну хвилину мовчання" />
     <meta
       name="twitter:description"
-      content="Цілодобова YouTube-трансляція та інструкції для використання на екранах, сайтах, у проєктах, медіа й на GitHub Pages."
+      content="Цілодобова YouTube-трансляція та інструкції для використання на екранах, сайтах, у проєктах і медіа."
     />
     <link
       rel="canonical"
@@ -50,7 +50,7 @@
         "@id": "https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html#webpage",
         "url": "https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html",
         "name": "Про загальнонаціональну хвилину мовчання",
-        "description": "Призначення онлайн-сторінки, цілодобова YouTube-трансляція та інструкції для використання на екранах, у державних установах, на сайтах, у проєктах, медіа й на GitHub Pages.",
+        "description": "Призначення онлайн-сторінки, цілодобова YouTube-трансляція та інструкції для використання на екранах, у державних установах, на сайтах, у проєктах і медіа.",
         "inLanguage": "uk-UA",
         "isPartOf": {
           "@id": "https://hypnoser.github.io/9-00/#website"
@@ -756,84 +756,11 @@
           </div>
         </section>
 
-        <section class="section section-heading" id="github-pages">
-          <h2>Запуск на GitHub Pages</h2>
-          <div>
-            <p>
-              GitHub Pages безоплатно публікує статичні HTML, CSS і JavaScript-файли з репозиторію.
-              Для цього сайту не потрібна база даних або серверна програма.
-            </p>
-            <p class="note">
-              Сайт уже розміщено в репозиторії <code>hypnoser/9-00</code> і доступний за
-              постійною адресою <code>https://hypnoser.github.io/9-00/</code>.
-            </p>
-
-            <ol class="steps">
-              <li><strong>Відкрийте репозиторій.</strong> Увійдіть у GitHub і відкрийте <code>hypnoser/9-00</code>.</li>
-              <li><strong>Розпакуйте архів.</strong> Переконайтеся, що <code>index.html</code> лежить у корені, поруч із <code>robots.txt</code>, <code>sitemap.xml</code>, <code>llms.txt</code> і папкою <code>assets</code>.</li>
-              <li><strong>Завантажте файли.</strong> У репозиторії натисніть <em>Add file → Upload files</em>, перетягніть весь вміст розпакованої папки та натисніть <em>Commit changes</em>.</li>
-              <li><strong>Увімкніть Pages.</strong> Відкрийте <em>Settings → Pages</em>. У розділі <em>Build and deployment</em> виберіть <em>Deploy from a branch</em>.</li>
-              <li><strong>Оберіть джерело.</strong> Встановіть гілку <code>main</code>, папку <code>/(root)</code> і натисніть <em>Save</em>.</li>
-              <li><strong>Дочекайтеся публікації.</strong> Через кілька хвилин сайт оновиться за адресою <code>https://hypnoser.github.io/9-00/</code>.</li>
-              <li><strong>Перевірте роботу.</strong> Відкрийте сайт звичайно, а потім адресу <code>https://hypnoser.github.io/9-00/?test=1</code> для повної хвилинної перевірки.</li>
-            </ol>
-
-            <h3>Коли з’явиться власний домен</h3>
-            <ol>
-              <li>У GitHub відкрийте <em>Settings → Pages → Custom domain</em>.</li>
-              <li>Введіть придбаний домен і збережіть налаштування.</li>
-              <li>У кабінеті реєстратора домену додайте DNS-записи, які вкаже актуальна документація GitHub.</li>
-              <li>Після перевірки DNS увімкніть <em>Enforce HTTPS</em>.</li>
-              <li>Замініть тимчасову адресу в canonical, Open Graph, sitemap, robots і LLMS-файлах на новий домен.</li>
-            </ol>
-            <p>
-              Детальніше:
-              <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" rel="noopener noreferrer">джерело публікації GitHub Pages</a>
-              та
-              <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" rel="noopener noreferrer">підключення власного домену</a>.
-            </p>
-          </div>
-        </section>
-
-        <section class="section section-heading" id="seo-ai">
-          <h2>SEO та AI-пошук</h2>
-          <div>
-            <p>
-              У комплекті є метадані для пошукових систем, canonical, sitemap, robots.txt,
-              Schema.org/JSON-LD, Open Graph, вебманіфест, а також <code>llms.txt</code> і
-              <code>llms-full.txt</code> для машинного читання змісту сайту.
-            </p>
-            <p>
-              Пошуковим AI-ботам дозволено знаходити сторінку та використовувати її як
-              джерело з посиланням. Відомі боти, призначені для формування навчальних
-              наборів моделей, заблоковані у <code>robots.txt</code>. Ці правила є технічним
-              сигналом для добросовісних роботів і не замінюють юридичні умови використання.
-            </p>
-            <p>
-              Для поточної адреси можна окремо додати Google Search Console,
-              Bing Webmaster Tools та аналітику, не змінюючи роботу хвилини мовчання.
-            </p>
-            <p class="note">
-              Сайт працює в підпапці <code>/9-00/</code>. Тому файл
-              <code>https://hypnoser.github.io/9-00/robots.txt</code> доступний, але кореневі
-              правила для всього домену потрібно додатково розмістити за адресою
-              <code>https://hypnoser.github.io/robots.txt</code> через репозиторій
-              <code>hypnoser.github.io</code>.
-            </p>
-          </div>
-        </section>
-
         <section class="section section-heading" id="dzherela">
           <h2>Джерела</h2>
           <div>
             <ul class="source-list">
               <li><a href="https://www.president.gov.ua/documents/1432022-41729" rel="noopener noreferrer">Указ Президента України №143/2022</a></li>
-              <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" rel="noopener noreferrer">Офіційна документація GitHub Pages</a></li>
-              <li><a href="https://developers.google.com/youtube/player_parameters" rel="noopener noreferrer">YouTube: вбудовані програвачі та параметри</a></li>
-              <li><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" rel="noopener noreferrer">Google Search Central: robots.txt</a></li>
-              <li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI: OAI-SearchBot і GPTBot</a></li>
-              <li><a href="https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener noreferrer">Anthropic: Claude-SearchBot і ClaudeBot</a></li>
-              <li><a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers" rel="noopener noreferrer">Perplexity: пошукові роботи</a></li>
             </ul>
           </div>
         </section>
