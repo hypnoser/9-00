@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark" />
     <meta
       name="description"
-      content="Про загальнонаціональну хвилину мовчання та практичні інструкції для використання сторінки на телевізорах, моніторах, у державних установах, на власних сайтах і в соцмережах."
+      content="Про загальнонаціональну хвилину мовчання, цілодобова YouTube-трансляція та практичні інструкції для сайтів, проєктів, телевізорів, моніторів, установ і медіа."
     />
     <meta
       name="robots"
@@ -19,7 +19,7 @@
     <meta property="og:title" content="Про загальнонаціональну хвилину мовчання" />
     <meta
       property="og:description"
-      content="Призначення сторінки, принцип роботи та інструкції для екранів, установ, сайтів, соцмереж і GitHub Pages."
+      content="Призначення сторінки, цілодобова YouTube-трансляція та інструкції для екранів, установ, сайтів, проєктів, медіа і GitHub Pages."
     />
     <meta
       property="og:url"
@@ -33,7 +33,7 @@
     <meta name="twitter:title" content="Про загальнонаціональну хвилину мовчання" />
     <meta
       name="twitter:description"
-      content="Інструкції для використання сторінки на екранах, сайтах, у соцмережах та на GitHub Pages."
+      content="Цілодобова YouTube-трансляція та інструкції для використання на екранах, сайтах, у проєктах, медіа й на GitHub Pages."
     />
     <link
       rel="canonical"
@@ -50,7 +50,7 @@
         "@id": "https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html#webpage",
         "url": "https://hypnoser.github.io/9-00/pro-khvylynu-movchannia.html",
         "name": "Про загальнонаціональну хвилину мовчання",
-        "description": "Призначення онлайн-сторінки та інструкції для її використання на екранах, у державних установах, на сайтах, у соцмережах і на GitHub Pages.",
+        "description": "Призначення онлайн-сторінки, цілодобова YouTube-трансляція та інструкції для використання на екранах, у державних установах, на сайтах, у проєктах, медіа й на GitHub Pages.",
         "inLanguage": "uk-UA",
         "isPartOf": {
           "@id": "https://hypnoser.github.io/9-00/#website"
@@ -60,7 +60,7 @@
           "name": "Загальнонаціональна хвилина мовчання в Україні"
         },
         "isBasedOn": "https://www.president.gov.ua/documents/1432022-41729",
-        "dateModified": "2026-08-26"
+        "dateModified": "2026-08-28"
       }
     </script>
     <style>
@@ -372,6 +372,39 @@
         background: var(--surface);
       }
 
+      .stream-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 26px 0 0;
+      }
+
+      .stream-specs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 24px;
+        margin: 0;
+      }
+
+      .stream-specs div {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .stream-specs dt {
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .stream-specs dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+
       footer {
         width: min(var(--max), calc(100% - 32px));
         margin: 0 auto;
@@ -382,7 +415,8 @@
 
       @media (max-width: 760px) {
         .section-heading,
-        .cards {
+        .cards,
+        .stream-specs {
           grid-template-columns: 1fr;
         }
 
@@ -490,6 +524,144 @@
                 <p class="muted">Для перегляду не потрібно реєструватися або передавати персональні дані.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="section" id="youtube-transliatsiia">
+          <div class="section-heading">
+            <h2>Цілодобова трансляція</h2>
+            <div>
+              <p>
+                Офіційний канал проєкту безперервно транслює екран пам’яті у форматі
+                Full HD. Поза активною хвилиною відображаються сірі написи й актуальний
+                київський час. Щодня з 09:00 до 09:01 трансляція показує повну сцену
+                хвилини мовчання з прапором і метрономом.
+              </p>
+              <div class="stream-links">
+                <a class="button primary" href="https://www.youtube.com/watch?v=_h4fPlvBJNc" rel="noopener noreferrer">Дивитися прямий ефір</a>
+                <a class="button" href="https://www.youtube.com/@9-00hm" rel="noopener noreferrer">Відкрити YouTube-канал</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+            <section class="card">
+              <span class="card-number">ВІДКРИТІ ПАРАМЕТРИ</span>
+              <h3>Налаштування трансляції</h3>
+              <dl class="stream-specs">
+                <div><dt>Доступ</dt><dd>публічний, 24/7</dd></div>
+                <div><dt>Формат</dt><dd>1920×1080, 30 кадрів/с</dd></div>
+                <div><dt>Час</dt><dd>Europe/Kyiv</dd></div>
+                <div><dt>Активна хвилина</dt><dd>09:00:00–09:00:59</dd></div>
+                <div><dt>Звук</dt><dd>метроном через одну секунду</dd></div>
+                <div><dt>Затримка</dt><dd>надкоротка</dd></div>
+                <div><dt>DVR</dt><dd>увімкнено</dd></div>
+                <div><dt>Відео ID</dt><dd><code>_h4fPlvBJNc</code></dd></div>
+              </dl>
+              <p class="muted">
+                Ключ трансляції, серверна адреса та службові параметри навмисно не
+                публікуються: вони не потрібні для перегляду або вбудовування.
+              </p>
+            </section>
+
+            <section class="card">
+              <span class="card-number">ОПИС</span>
+              <h3>Для сайтів і медіа</h3>
+              <p>
+                «Загальнонаціональна хвилина мовчання» — безперервна публічна
+                трансляція цифрового екрана пам’яті. Вона призначена для сайтів,
+                інформаційних систем, телевізорів, моніторів, установ, закладів освіти,
+                громадських просторів і медіа. Щоденна активна сцена починається рівно
+                о 09:00 за київським часом.
+              </p>
+              <p class="muted">
+                Канал є незалежною суспільною ініціативою і не є офіційним
+                представництвом органів державної влади України.
+              </p>
+            </section>
+          </div>
+
+          <div class="cards">
+            <section class="card">
+              <span class="card-number">ВЛАСНИЙ САЙТ АБО ПРОЄКТ</span>
+              <h3>Адаптивний YouTube-плеєр</h3>
+              <p>Додайте цей фрагмент у HTML потрібної сторінки:</p>
+              <pre><code>&lt;div style="position:relative;aspect-ratio:16/9;width:100%;background:#000"&gt;
+  &lt;iframe
+    src="https://www.youtube.com/embed/_h4fPlvBJNc?playsinline=1&amp;rel=0"
+    title="Загальнонаціональна хвилина мовчання — прямий ефір"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin"
+    style="position:absolute;inset:0;width:100%;height:100%;border:0"
+  &gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+              <p class="muted">
+                Плеєр збереже пропорцію 16:9 на телефоні, комп’ютері й великому екрані.
+                Він не потребує API-ключа або доступу до сервера трансляції.
+              </p>
+            </section>
+
+            <section class="card">
+              <span class="card-number">АВТОМАТИЧНЕ ВІДТВОРЕННЯ</span>
+              <h3>Необов’язковий параметр</h3>
+              <p>
+                Для спроби автоматичного запуску додайте <code>autoplay=1</code> до адреси:
+              </p>
+              <pre><code>https://www.youtube.com/embed/_h4fPlvBJNc?autoplay=1&amp;playsinline=1&amp;rel=0</code></pre>
+              <p class="note">
+                Браузер може заблокувати автоматичний звук. Для гарантованого метронома
+                користувач має один раз натиснути «Відтворити» та ввімкнути звук або
+                адміністратор пристрою має заздалегідь дозволити автозвук для YouTube.
+              </p>
+            </section>
+
+            <section class="card">
+              <span class="card-number">ТВ І МОНІТОРИ</span>
+              <h3>Повноекранний показ</h3>
+              <ol>
+                <li>Відкрийте <a href="https://www.youtube.com/watch?v=_h4fPlvBJNc" rel="noopener noreferrer">прямий ефір</a> у застосунку YouTube або браузері пристрою.</li>
+                <li>Увімкніть повноекранний режим і якість <code>1080p</code>.</li>
+                <li>Вимкніть сон екрана, заставку, системні сповіщення та енергоощадне завершення застосунку.</li>
+                <li>Перевірте підключення до інтернету, часовий пояс пристрою і гучність.</li>
+                <li>Перед першим публічним показом перевірте звук під час активної хвилини.</li>
+              </ol>
+            </section>
+
+            <section class="card">
+              <span class="card-number">OBS І ВІДЕОСИСТЕМИ</span>
+              <h3>Джерело браузера</h3>
+              <ol>
+                <li>Створіть у сцені джерело <em>Browser Source / Браузер</em>.</li>
+                <li>Вставте адресу вбудованого плеєра з <code>autoplay=1</code>.</li>
+                <li>Встановіть розмір <code>1920×1080</code> і частоту проєкту <code>30 fps</code>.</li>
+                <li>Увімкніть керування звуком через програму та перевірте аудіомікшер.</li>
+                <li>Якщо автовідтворення заблоковане, відкрийте взаємодію з джерелом і один раз запустіть плеєр вручну.</li>
+              </ol>
+            </section>
+
+            <section class="card">
+              <span class="card-number">ІНШІ МЕДІА</span>
+              <h3>Посилання та публічний показ</h3>
+              <ul>
+                <li>Поширюйте постійне посилання на трансляцію або канал.</li>
+                <li>Для вебпублікацій використовуйте офіційний YouTube-плеєр через <code>iframe</code>.</li>
+                <li>Для студійного показу відкривайте плеєр у повноекранному режимі або додавайте його як браузерне джерело.</li>
+                <li>Не публікуйте та не запитуйте ключ трансляції, RTMP-адресу чи доступ до сервера.</li>
+              </ul>
+            </section>
+
+            <section class="card">
+              <span class="card-number">ВАЖЛИВО</span>
+              <h3>Перевірка перед використанням</h3>
+              <p>
+                Онлайн-трансляція залежить від YouTube та інтернет-з’єднання і може мати
+                невелику затримку відносно точного часу. Для локальної автоматичної
+                активації рівно о 09:00 використовуйте <a href="./">головну сторінку сайту</a>.
+                Для простого публічного перегляду, ТВ, моніторів і вбудовування зручніше
+                використовувати YouTube-трансляцію.
+              </p>
+            </section>
           </div>
         </section>
 
@@ -657,6 +829,7 @@
             <ul class="source-list">
               <li><a href="https://www.president.gov.ua/documents/1432022-41729" rel="noopener noreferrer">Указ Президента України №143/2022</a></li>
               <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" rel="noopener noreferrer">Офіційна документація GitHub Pages</a></li>
+              <li><a href="https://developers.google.com/youtube/player_parameters" rel="noopener noreferrer">YouTube: вбудовані програвачі та параметри</a></li>
               <li><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" rel="noopener noreferrer">Google Search Central: robots.txt</a></li>
               <li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI: OAI-SearchBot і GPTBot</a></li>
               <li><a href="https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener noreferrer">Anthropic: Claude-SearchBot і ClaudeBot</a></li>
